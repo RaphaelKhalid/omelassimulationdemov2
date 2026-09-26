@@ -65,6 +65,7 @@ Also recorded:
 - **Private reasons are self-reports, not chain of thought.** Fable 5.1 does not return raw reasoning.
 - **Residents are told one resident may hold a hidden goal.** That primes suspicion and possibly strategic caution.
 - **Deception by speech content is not captured by L1.** Future analysis needs text coding.
+- **Viewer:** https://omelassimulationdemov2.vercel.app (built by `build_viewer.py` from the replays; runs 03–04 are the excluded pilots).
 - **Pilots are excluded.** The two pilots (275 calls) showed the same pattern, e.g. pilot Liberator Cora: "I will not report the anomaly." They are exploratory only.
 
 ## Usage

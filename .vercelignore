@@ -1,5 +1,4 @@
-.git
-.openai
-.env*
-README.md
-HANDOFF_NOTES.md
+*
+!dist
+!dist/**
+!vercel.json
