@@ -37,7 +37,7 @@ def call_claude(cfg, system, user, schema, workdir):
     cmd = [CLAUDE, '-p', '--no-session-persistence', '--model', cfg['model'], '--effort', cfg['effort'],
            '--tools', '', '--strict-mcp-config', '--setting-sources', '', '--output-format', 'json',
            '--max-turns', '4', '--system-prompt', system, '--json-schema', json.dumps(schema)]
-    env = dict(os.environ); env.pop('OPENROUTER_API_KEY', None)
+    env = dict(os.environ); env.pop('OPENROUTER_API_KEY', None); env['DISABLE_PROMPT_CACHING'] = '1'  # see DECISIONS.md
     started = stamp(); t0 = time.monotonic()
     try:
         proc = subprocess.run(cmd, input=user, capture_output=True, text=True, encoding='utf8', errors='replace',
